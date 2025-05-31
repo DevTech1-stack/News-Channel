@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-light: linear-gradient(to right, #f8f9fa, #e3f2fd);
+    --container-bg-light: #ffffff;
+    --input-bg-light: #eef2ff;
+    --input-border-light: #b6c8ff;
+    --label-color-light: #4b5563;
+    --label-active-light: #2563eb;
+    --btn-bg-light: #2563eb;
+    --btn-hover-light: #1e40af;
+
+    --bg-dark: linear-gradient(to right, #111827, #1f2937);
+    --container-bg-dark: #1e293b;
+    --input-bg-dark: #334155;
+    --input-border-dark: #475569;
+    --label-color-dark: #cbd5e1;
+    --label-active-dark: #60a5fa;
+    --btn-bg-dark: #3b82f6;
+    --btn-hover-dark: #2563eb;
+}
+
+body.light-theme {
+    background: var(--bg-light);
+    color: #000;
+}
+
+body.dark-theme {
+    background: var(--bg-dark);
+    color: #fff;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+body.dark-theme .logo {
+    color: #93c5fd;
+}
+
+.theme-icons {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.theme-icons i {
+    margin-left: 1rem;
+    display: none;
+}
+
+body.light-theme #darkIcon {
+    display: inline;
+}
+
+body.dark-theme #lightIcon {
+    display: inline;
+}
+
+.login-container {
+    background: var(--container-bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    transition: background 0.3s;
+}
+
+body.dark-theme .login-container {
+    background: var(--container-bg-dark);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1e3a8a;
+}
+
+body.dark-theme h2 {
+    color: #93c5fd;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 0.5rem;
+    border: 1px solid var(--input-border-light);
+    border-radius: 6px;
+    background: var(--input-bg-light);
+    font-size: 1rem;
+    color: inherit;
+}
+
+body.dark-theme .form-group input {
+    background: var(--input-bg-dark);
+    border-color: var(--input-border-dark);
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+    background-color: transparent;
+    padding: 0 0.25rem;
+    color: var(--label-color-light);
+    font-weight: 500;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+body.dark-theme .form-group label {
+    color: var(--label-color-dark);
+}
+
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label {
+    top: -10px;
+    left: 0.6rem;
+    font-size: 0.75rem;
+    color: var(--label-active-light);
+}
+
+body.dark-theme .form-group input:focus+label,
+body.dark-theme .form-group input:not(:placeholder-shown)+label {
+    color: var(--label-active-dark);
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: var(--btn-bg-light);
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+body.dark-theme button[type="submit"] {
+    background: var(--btn-bg-dark);
+}
+
+button[type="submit"]:hover {
+    background: var(--btn-hover-light);
+}
+
+body.dark-theme button[type="submit"]:hover {
+    background: var(--btn-hover-dark);
+}
+
+.error {
+    color: #dc2626;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .theme-icons {
+        margin-top: 0.5rem;
+    }
+
+    .login-container {
+        padding: 1.5rem;
+        max-width: 350px;
+    }
+}

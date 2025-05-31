@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-light: linear-gradient(to right, #f8f9fa, #e3f2fd);
+    --container-bg-light: #ffffff;
+    --input-bg-light: #eef2ff;
+    --input-border-light: #b6c8ff;
+    --label-color-light: #4b5563;
+    --label-active-light: #2563eb;
+    --btn-bg-light: #2563eb;
+    --btn-hover-light: #1e40af;
+
+    --bg-dark: linear-gradient(to right, #111827, #1f2937);
+    --container-bg-dark: #1e293b;
+    --input-bg-dark: #334155;
+    --input-border-dark: #475569;
+    --label-color-dark: #cbd5e1;
+    --label-active-dark: #60a5fa;
+    --btn-bg-dark: #3b82f6;
+    --btn-hover-dark: #2563eb;
+}
+
+body.light-theme {
+    background: var(--bg-light);
+    color: #000;
+}
+
+body.dark-theme {
+    background: var(--bg-dark);
+    color: #fff;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+body.dark-theme .logo {
+    color: #93c5fd;
+}
+
+.theme-icons {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.theme-icons i {
+    margin-left: 1rem;
+    display: none;
+}
+
+body.light-theme #darkIcon {
+    display: inline;
+}
+
+body.dark-theme #lightIcon {
+    display: inline;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f4f8;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    background: var(--container-bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--container-bg-dark);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 1.5rem auto 0;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    margin-top: 1rem;
+}

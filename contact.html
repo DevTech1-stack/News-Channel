@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBC News - Travel</title>
+
+    <!-- CS-LINK -->
+    <link rel="stylesheet" href="/assessts/css/contact.css">
+
+    <!-- ICONS-LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">BBC NEWS</div>
+
+        <nav>
+            <ul id="navLinks">
+                <li onclick="navigateTo('index.html')">Home</li>
+                <li onclick="navigateTo('politics.html')">Politics</li>
+                <li onclick="navigateTo('technology.html')">Technology</li>
+                <li onclick="navigateTo('entertainment.html')">Entertainment</li>
+                <li onclick="navigateTo('sports.html')">Sports</li>
+                <li onclick="navigateTo('business.html')">Business</li>
+                <li onclick="navigateTo('science.html')">Science</li>
+                <li onclick="navigateTo('health.html')">Health</li>
+                <li onclick="navigateTo('travel.html')">Travel</li>
+                <li onclick="navigateTo('about.html')">About Us</li>
+                <li onclick="navigateTo('contact.html')">Contact</li>
+            </ul>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></div>
+            <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+
+
+    <section class="hero">
+        <h1>Get in Touch with BBC NEWS</h1>
+        <p>We value your feedback, suggestions, and inquiries.</p>
+    </section>
+
+    <section class="section">
+        <h2 style="margin-bottom: 20px;">Send Us a Message</h2>
+        <form class="contact-form" onsubmit="return validateForm()">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="subject" placeholder="Subject (Optional)">
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="info">
+            <p><strong>Email:</strong> contact@bbcnews.com</p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+            <p><strong>Address:</strong> 123 News Street, Media City</p>
+            <p><strong>Office Hours:</strong> Mon–Fri, 9AM–6PM</p>
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0;"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+
+    <footer>
+        <div class="footer-col">
+            <h4 class="footer-heading">BBC NEWS</h4>
+            <p>Bringing you the latest and most accurate news across the globe. Stay informed 24/7.</p>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li onclick="navigateTo('index.html')">Home</li>
+                <li onclick="navigateTo('about.html')">About Us</li>
+                <li onclick="navigateTo('contact.html')">Contact Us</li>
+                <li onclick="navigateTo('privacy.html')">Privacy Policy</li>
+                <li onclick="navigateTo('terms.html')">Terms & Conditions</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Get in Touch</h4>
+            <ul>
+                <li>Email: contact@bbcnews.com</li>
+                <li>Phone: +1 234 567 890</li>
+                <li>Address: 123 News Street, Media City</li>
+            </ul>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        &copy; 2025 BBC NEWS. All rights reserved.
+    </div>
+
+
+
+    <!-- JS-LINK -->
+
+    <script src="/assessts/js/home.js"></script>
+
+</body>
+
+</html>

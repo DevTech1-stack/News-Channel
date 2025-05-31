@@ -1,0 +1,270 @@
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
+  :root {
+      --bg-light: linear-gradient(to right, #f8f9fa, #e3f2fd);
+      --container-bg-light: #ffffff;
+      --input-bg-light: #eef2ff;
+      --input-border-light: #b6c8ff;
+      --label-color-light: #4b5563;
+      --label-active-light: #2563eb;
+      --btn-bg-light: #2563eb;
+      --btn-hover-light: #1e40af;
+
+      --bg-dark: linear-gradient(to right, #111827, #1f2937);
+      --container-bg-dark: #1e293b;
+      --input-bg-dark: #334155;
+      --input-border-dark: #475569;
+      --label-color-dark: #cbd5e1;
+      --label-active-dark: #60a5fa;
+      --btn-bg-dark: #3b82f6;
+      --btn-hover-dark: #2563eb;
+
+      --primary: #1e3a8a;
+      --light-bg: #f9fafb;
+      --dark-bg: #111827;
+      --text-light: #1f2937;
+      --text-dark: #f3f4f6;
+  }
+
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-light);
+  }
+
+  body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+  }
+
+  header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: var(--primary);
+      color: #fff;
+      position: relative;
+  }
+
+  .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+  }
+
+  .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+  }
+
+  nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+  }
+
+  nav ul li {
+      cursor: pointer;
+  }
+
+  .theme-toggle {
+      cursor: pointer;
+      margin-left: 1rem;
+  }
+
+  .hero {
+      padding: 8rem 2rem;
+
+      background: url('/assessts/img/politics-hero.jpg') center/cover no-repeat;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, .8);
+      text-align: center;
+  }
+
+
+  .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+  }
+
+  .section {
+      padding: 4rem;
+  }
+
+  .articles {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+  }
+
+  .article-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s;
+  }
+
+  .article-card:hover {
+      transform: translateY(-5px);
+  }
+
+  .article-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+  }
+
+  .article-content {
+      padding: 1rem;
+  }
+
+  .article-content h3 {
+      color: var(--container-bg-dark);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+  }
+
+  .article-content p {
+      font-size: 0.95rem;
+      color: var(--container-bg-dark);
+  }
+
+  footer {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10rem;
+      justify-content: space-between;
+  }
+
+  .footer-col {
+      flex: 1 1 250px;
+  }
+
+  .footer-heading {
+      font-size: 2rem;
+  }
+
+  .footer-col h4 {
+      margin-bottom: 1rem;
+  }
+
+  .footer-col ul {
+      list-style: none;
+      padding: 0;
+  }
+
+  .footer-col ul li {
+      margin-bottom: 0.5rem;
+  }
+
+  .social-icons {
+      margin-top: 4rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .social-icons i {
+      margin-right: 0.8rem;
+      font-size: 1.3rem;
+      transition: transform 0.2s ease;
+  }
+
+  .social-icons i:hover {
+      transform: scale(1.2);
+  }
+
+  .footer-bottom {
+      background: #1e3a8a;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+      header {
+          flex-direction: row;
+          align-items: center;
+      }
+
+      nav ul {
+          display: none;
+          flex-direction: column;
+          background: var(--primary);
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 200px;
+          padding: 1rem;
+          z-index: 10;
+      }
+
+      nav ul.show {
+          display: flex;
+      }
+
+      .menu-toggle {
+          display: block;
+      }
+
+      .hero h1 {
+          font-size: 2rem;
+      }
+
+
+
+
+      footer {
+          flex-direction: column;
+          gap: 2rem;
+      }
+
+      .footer-col {
+          text-align: left;
+      }
+  }
+
+  @media (max-width: 476px) {
+      header {
+          padding: 1rem;
+      }
+
+      .hero h1 {
+          font-size: 1.6rem;
+      }
+
+      .section {
+          padding: 1rem;
+      }
+
+
+
+      .footer-col ul li,
+      .footer-col p,
+      .footer-col h4 {
+          font-size: 0.9rem;
+      }
+
+      .social-icons i {
+          font-size: 1.1rem;
+          margin-right: 0.6rem;
+      }
+
+      .footer-bottom {
+          font-size: 0.8rem;
+          padding: 0.8rem;
+      }
+  }
